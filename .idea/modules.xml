@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DouYin.iml" filepath="$PROJECT_DIR$/DouYin.iml" />
+      <module fileurl="file://D:\Dou\DouYinProject\DouYin.iml" filepath="D:\Dou\DouYinProject\DouYin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DouYinProject.iml" filepath="$PROJECT_DIR$/DouYinProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
