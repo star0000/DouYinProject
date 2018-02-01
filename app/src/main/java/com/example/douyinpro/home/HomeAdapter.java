@@ -4,12 +4,14 @@ import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.example.douyinpro.R;
 import com.example.douyinpro.home.bean.HomeBean;
@@ -18,6 +20,7 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
 import java.io.IOException;
 import java.util.List;
+
 
 /**
  * Created by 墨羽 on 2018/2/1.
@@ -28,9 +31,6 @@ public class HomeAdapter extends XRecyclerView.Adapter<HomeAdapter.ViewHolder> {
     private Context context;
     private List<HomeBean.CategoryListBean> categoryList;
     private ViewHolder holder;
-    private MediaPlayer mediaPlayer;
-    private SurfaceHolder surfaceHolder;
-    private String playUrl;
 
     public HomeAdapter(Context context, List<HomeBean.CategoryListBean> categoryList) {
         this.context = context;
@@ -46,10 +46,16 @@ public class HomeAdapter extends XRecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        playUrl = categoryList.get(position).getAweme_list().get(position).getVideo().getPlay_addr().getUrl_list().get(0);
+        String imgPlayUrl = categoryList.get(position).getAweme_list().get(position).getVideo().getOrigin_cover().getUrl_list().get(0);
+        String playUrl = categoryList.get(position).getAweme_list().get(position).getVideo().getPlay_addr().getUrl_list().get(0);
+        Log.e("WSF", "onBindViewHolder: "+playUrl );
         holder.xrvHeartnum.setText(categoryList.get(position).getAweme_list().get(position).getStatistics().getComment_count()+"");
         holder.xrvNewsnum.setText(categoryList.get(position).getAweme_list().get(position).getStatistics().getDigg_count()+"");
-
+        holder.homeVideoplay.setVideoURI(Uri.parse(playUrl));
+        MediaController mediaController = new MediaController(context);
+        holder.homeVideoplay.setMediaController(mediaController);
+        mediaController.setMediaPlayer(holder.homeVideoplay);
+        holder.homeVideoplay.start();
     }
 
     @Override
@@ -64,10 +70,11 @@ public class HomeAdapter extends XRecyclerView.Adapter<HomeAdapter.ViewHolder> {
         private final ImageView xrvNews;
         private final TextView xrvNewsnum;
         private final ImageView xrvShareimg;
+        private final VideoView homeVideoplay;
 
         public ViewHolder(View itemView) {
             super(itemView);
-
+            homeVideoplay = itemView.findViewById(R.id.home_videoplay);
             xrvIcon = itemView.findViewById(R.id.xrv_icon);
             xrvHeart = itemView.findViewById(R.id.xrv_heart);
             xrvHeartnum = itemView.findViewById(R.id.xrv_heartnum);
