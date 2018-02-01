@@ -1,6 +1,5 @@
 package com.example.douyinpro;
 
-import android.animation.ObjectAnimator;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +14,12 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.douyinpro.add.AddFragment;
+import com.example.douyinpro.attention.AttentionFragment;
+import com.example.douyinpro.home.view.HomeFragment;
+import com.example.douyinpro.mine.MineFragment;
+import com.example.douyinpro.news.NewsFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

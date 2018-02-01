@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
+        android:id="@+id/videocontroller1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/xrv_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:id="@+id/xrv_heart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/heart"/>
+        <TextView
+            android:id="@+id/xrv_heartnum"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF9F9F4"
+            android:gravity="center"
+            android:layout_marginTop="1dp" />
+
+        <ImageView
+            android:id="@+id/xrv_news"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/news"/>
+        <TextView
+            android:id="@+id/xrv_newsnum"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF9F9F4"
+            android:layout_marginTop="1dp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/xrv_shareimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/share"/>
+        <TextView
+            android:id="@+id/xrv_sharetext"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:textColor="#FFF9F9F4"
+            android:text="分享"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

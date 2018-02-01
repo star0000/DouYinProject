@@ -1,4 +1,4 @@
-package com.example.douyinpro;
+package com.example.douyinpro.add;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,19 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.douyinpro.R;
+
 /**
  * Created by 墨羽 on 2018/1/24.
  */
 
-public class MineFragment extends Fragment {
+public class AddFragment extends Fragment {
 
-    private View mineView;
+    private View addView;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mineView = inflater.inflate(R.layout.fragment_mine, container, false);
-        return mineView;
+        addView = inflater.inflate(R.layout.fragment_add, container, false);
+        return addView;
     }
 
 }
