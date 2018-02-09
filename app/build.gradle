@@ -40,7 +40,6 @@ dependencies {
     compile 'com.facebook.fresco:animated-gif:0.14.1'
     compile 'com.facebook.fresco:animated-webp:0.14.1'
     compile 'com.facebook.fresco:webpsupport:0.14.1'
-
-
-
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'org.greenrobot:eventbus:3.1.1'
 }

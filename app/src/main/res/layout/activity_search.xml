@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF050404"
+    tools:context="com.example.douyinpro.home.SearchActivity">
+
+    <com.example.douyinpro.home.HomeSearchView
+        android:id="@+id/homesearchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+    </com.example.douyinpro.home.HomeSearchView>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/search_xrv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/homesearchview">
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+
+
+</RelativeLayout>

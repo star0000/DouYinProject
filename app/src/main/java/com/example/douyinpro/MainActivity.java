@@ -69,13 +69,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case 1:
                         fragment = new AttentionFragment();
                         break;
+//                    case 2:
+//                        fragment = new AddFragment();
+//                        break;
                     case 2:
-                        fragment = new AddFragment();
-                        break;
-                    case 3:
                         fragment = new NewsFragment();
                         break;
-                    case 4:
+                    case 3:
                         fragment = new MineFragment();
                         break;
                     default:
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public int getCount() {
-                return 5;
+                return 4;
             }
         });
 
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 homeRelative.setBackgroundColor(Color.BLACK);
                 break;
             case R.id.home_add:
-                homeViewpager.setCurrentItem(2, false);
+//                homeViewpager.setCurrentItem(2, false);
                 homeAdd.setColorFilter(Color.RED);
                 homeTv.setVisibility(View.VISIBLE);
                 homeImg.setVisibility(View.GONE);
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 homeRelative.setBackgroundColor(Color.BLACK);
                 break;
             case R.id.home_news:
-                homeViewpager.setCurrentItem(3, false);
+                homeViewpager.setCurrentItem(2, false);
                 homeNews.setTextColor(Color.RED);
                 homeTv.setVisibility(View.VISIBLE);
                 homeImg.setVisibility(View.GONE);
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 homeRelative.setBackgroundColor(Color.BLACK);
                 break;
             case R.id.home_mine:
-                homeViewpager.setCurrentItem(4, false);
+                homeViewpager.setCurrentItem(3, false);
                 homeMine.setTextColor(Color.RED);
                 homeTv.setVisibility(View.VISIBLE);
                 homeImg.setVisibility(View.GONE);

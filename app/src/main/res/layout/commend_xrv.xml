@@ -4,18 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <VideoView
-        android:id="@+id/home_videoplay"
+    <SurfaceView
+        android:id="@+id/home_surface"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="400dp"
         android:orientation="vertical">
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/xrv_icon"
@@ -64,5 +62,36 @@
             android:text="分享"
             android:gravity="center"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/user"
+            android:textColor="#FFF5F2F2"
+            android:textSize="25sp"
+            android:text="nihaoansx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/user_title"
+            android:textColor="#FFF5F2F2"
+            android:textSize="20dp"
+            android:text="cashbxasb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/home_pause"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pause"
+        android:visibility="gone"/>
 
 </RelativeLayout>
